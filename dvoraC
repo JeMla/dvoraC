@@ -1,0 +1,90 @@
+// By Farid Hammane <farid.hammane at gmail.com>
+// Based on the X keyboard extension fr/dvorak
+//
+// ┌────┐
+// │ S A│   S = Shift,  A = AltGr + Shift
+// │ s a│   s = normal, a = AltGr
+// └────┘
+//
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
+// │ É ¯ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 « │ 5 » │ 6 ¬ │ 7 × │ 8 ÷ │ 9 ± │ 0 ¨ │ { { │ } } ┃ ⌫ Retour┃
+// │ À   │ \ & │ ' ~ │ - # │ * < │ = > │ + œ │ ` ^ │ @ ^ │ % ` │ | ¨ │ ( ( │ ) ) ┃  arrière┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
+// ┃       ┃ ?   │ à   │ é   │ !   │ G   │ H   │ L   │ C   │ M   │ K   │ Z   │ È   ┃Entrée ┃
+// ┃Tab ↹  ┃ /   │ "   │ _ € │ .   │ g   │ h   │ l   │ c   │ m   │ k   │ z   │ è ̆ ┃   ⏎   ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
+// ┃        ┃ A   │ U   │ I   │ E   │ ;   │ C   │ T   │ S   │ R   │ N   │ M   │ Ç   ┃      ┃
+// ┃Maj ⇬   ┃ o   │ a   │ u   │ e   │ p   │ f   │ s   │ t   │ n   │ d   │ w   │ :   ┃      ┃
+// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
+// ┃       ┃ Ç   │ Ù   │ Q   │ ;   │ I   │ Y   │ X   │ R  ̣ │ V   │ B   │ J  ┃             ┃
+// ┃Shift ⇧┃ ç   │ ù   │ q   │ ,   │ i   │ y   │ x   │ r   │ v   │ b   │ j   ┃Shift ⇧      ┃
+// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
+// ┃       ┃       ┃       ┃ Espace inséc.   Espace inséc. fin ┃       ┃       ┃       ┃
+// ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣ (Espace)      _               ␣ ┃AltGr ⇮┃Menu   ┃Ctrl   ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛
+
+partial default alphanumeric_keys
+xkb_symbols "dvorak" {
+
+    name[Group1]= "France - Dvorak";
+
+    key <TLDE>  { [ Agrave,  Eacute,   dead_acute,         macron ] };
+
+    key <AE01>  { [   backslash,        1,         ampersand,     onesuperior ] };
+    key <AE02>  { [  apostrophe,        2,        asciitilde,     twosuperior ] };
+    key <AE03>  { [       minus,        3,        numbersign,   threesuperior ] };
+    key <AE04>  { [    asterisk,        4,              less,   guillemotleft ] };
+    key <AE05>  { [       equal,        5,           greater,  guillemotright ] };
+    key <AE06>  { [        plus,        6,                oe,         notsign ] };
+    key <AE07>  { [  dead_grave,        7,   dead_circumflex,        multiply ] };
+    key <AE08>  { [          at,        8,       asciicircum,        division ] };
+    key <AE09>  { [     percent,        9,             grave,       plusminus ] };
+    
+    key <AE10>  { [ bar,       0,  dead_diaeresis, dead_diaeresis ] };
+    
+    
+    key <AE11>  { [parenleft,   braceleft,          bracketleft,         degree ] };
+    key <AE12>  { [parenright, braceright,      bracketright,        percent ] };
+
+    key <AD01>  { [      slash, question,        question,   questiondown ] };
+    key <AD02>  { [     quotedbl,   agrave,           aring,          Aring ] };
+    key <AD03>  { [     underscore,   eacute,        EuroSign,           cent ] };
+    key <AD04>  { [     period,   exclam,  periodcentered,     exclamdown ] };
+    key <AD05>  { [          g,        G,          oslash,       Ooblique ] };
+    key <AD06>  { [          h,        H,             eth,            ETH ] };
+    key <AD07>  { [          l,        L              ] };
+    key <AD08>  { [          c,        C,       copyright,     registered ] };
+    key <AD09>  { [          m,        M,              mu,             mu ] };
+    key <AD10>  { [          k,        K,          dollar,         dollar ] };
+    key <AD11>  { [          z,        Z,             yen,            yen ] };
+    key <AD12>  { [     egrave,   Egrave,        sterling,       sterling ] };
+
+    key <AC01>  { [          o,        O,     ocircumflex,    Ocircumflex ] };
+    key <AC02>  { [          a,        A,     acircumflex,    Acircumflex ] };
+    key <AC03>  { [          u,        U,     ucircumflex,    Ucircumflex ] };
+    key <AC04>  { [          e,        E,     ecircumflex,    Ecircumflex ] };
+    key <AC05>  { [          p,        P,          ssharp,         ssharp ] };
+    key <AC06>  { [          f,        F      ] };
+    key <AC07>  { [          s,        S      ] };
+    key <AC08>  { [          t,        T,           thorn,          THORN ] };
+    key <AC09>  { [          n,        N,          ntilde,         Ntilde ] };
+    key <AC10>  { [          d,        D,         section,        section ] };
+    key <AC11>  { [          w,        W,       paragraph,      paragraph ] };
+    key <BKSL>  { [     colon,        OE,       masculine,    ordfeminine ] };
+
+    key <AB01>  { [      ugrave,  Ugrave,              ae,             AE ] };
+    key <AB02>  { [          q,        Q,   guillemotleft,  guillemotleft ] };
+    key <AB03>  { [     comma, semicolon,  guillemotright, guillemotright ] };
+    key <AB04>  { [          i,        I,     icircumflex,    Icircumflex ] };
+    key <AB05>  { [          y,        Y,      ydiaeresis,     Ydiaeresis ] };
+    key <AB06>  { [          x,        X,      ediaeresis,     Ediaeresis ] };
+    key <AB07>  { [          r,        R,      udiaeresis,     Udiaeresis ] };
+    key <AB08>  { [          v,        V,      adiaeresis,     Adiaeresis ] };
+    key <AB09>  { [          b,        B,      odiaeresis,     Odiaeresis ] };
+    key <AB10>  { [          j,        J,      idiaeresis,     Idiaeresis ] };
+
+    key <SPCE>  { [      space,    space,    nobreakspace,   nobreakspace ] };
+    key <LSGT>  { [   ccedilla, Ccedilla      ] };
+
+    include "level3(ralt_switch)"
+};
