@@ -10,13 +10,13 @@
 // │ É ¯ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 « │ 5 » │ 6 ¬ │ 7 × │ 8 ÷ │ 9 ± │ 0 ¨ │ { { │ } } ┃ ⌫ Retour┃
 // │ À   │ \ & │ ' ~ │ - # │ * < │ = > │ + œ │ ` ^ │ @ ^ │ % ` │ | ¨ │ ( ( │ ) ) ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ ?   │ à   │ é   │ !   │ G   │ H   │ L   │ C   │ M   │ K   │ Z   │ È   ┃Entrée ┃
-// ┃Tab ↹  ┃ /   │ "   │ _ € │ .   │ g   │ h   │ l   │ c   │ m   │ k   │ z   │ è ̆ ┃   ⏎   ┃
+// ┃       ┃ ?   │ à   │ é   │ .   │ G   │ H   │ L   │ C   │ M   │ K   │ Z   │ È   ┃Entrée ┃
+// ┃Tab ↹  ┃ /   │ "   │ _ € │ . ! │ g   │ h   │ l   │ c   │ m   │ k   │ z   │ è ̆  ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 // ┃        ┃ A   │ U   │ I   │ E   │ ;   │ C   │ T   │ S   │ R   │ N   │ M   │ Ç   ┃      ┃
 // ┃Maj ⇬   ┃ o   │ a   │ u   │ e   │ p   │ f   │ s   │ t   │ n   │ d   │ w   │ :   ┃      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
-// ┃       ┃ Ç   │ Ù   │ Q   │ ;   │ I   │ Y   │ X   │ R  ̣ │ V   │ B   │ J  ┃             ┃
+// ┃       ┃ Ç   │ Ù   │ Q   │ ;   │ I   │ Y   │ X   │ R  ̣ │ V   │ B   │ J   ┃             ┃
 // ┃Shift ⇧┃ ç   │ ù   │ q   │ ,   │ i   │ y   │ x   │ r   │ v   │ b   │ j   ┃Shift ⇧      ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
 // ┃       ┃       ┃       ┃ Espace inséc.   Espace inséc. fin ┃       ┃       ┃       ┃
@@ -49,7 +49,7 @@ xkb_symbols "dvorak" {
     key <AD01>  { [      slash, question,        question,   questiondown ] };
     key <AD02>  { [     quotedbl,   agrave,           aring,          Aring ] };
     key <AD03>  { [     underscore,   eacute,        EuroSign,           cent ] };
-    key <AD04>  { [     period,   exclam,  periodcentered,     exclamdown ] };
+    key <AD04>  { [     period,   period,  exclam,     exclamdown ] };
     key <AD05>  { [          g,        G,          oslash,       Ooblique ] };
     key <AD06>  { [          h,        H,             eth,            ETH ] };
     key <AD07>  { [          l,        L              ] };
