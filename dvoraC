@@ -10,7 +10,7 @@
 // │ É ¯ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 « │ 5 » │ 6 ¬ │ 7 × │ 8 ÷ │ 9 ± │ 0 ¨ │ { { │ } } ┃ ⌫ Retour┃
 // │ À   │ \ & │ ' ~ │ - # │ * < │ = > │ + œ │ ` ^ │ @ ^ │ % ` │ | ¨ │ ( ( │ ) ) ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ ?   │ à   │ é   │ .   │ G   │ H   │ L   │ C   │ M   │ K   │ Z   │ È   ┃Entrée ┃
+// ┃       ┃ ? / │ à   │ é   │ .   │ G   │ H   │ L   │ C   │ M   │ K   │ Z   │ È   ┃Entrée ┃
 // ┃Tab ↹  ┃ /   │ "   │ _ € │ . ! │ g   │ h   │ l   │ c   │ m   │ k   │ z   │ è ̆  ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 // ┃        ┃ A   │ U   │ I   │ E   │ ;   │ C   │ T   │ S   │ R   │ N   │ M   │ Ç   ┃      ┃
@@ -46,7 +46,7 @@ xkb_symbols "dvorak" {
     key <AE11>  { [parenleft,   braceleft,          bracketleft,         degree ] };
     key <AE12>  { [parenright, braceright,      bracketright,        percent ] };
 
-    key <AD01>  { [      slash, question,        question,   questiondown ] };
+    key <AD01>  { [      slash, question,        slash,   questiondown ] };
     key <AD02>  { [     quotedbl,   agrave,           aring,          Aring ] };
     key <AD03>  { [     underscore,   eacute,        EuroSign,           cent ] };
     key <AD04>  { [     period,   period,  exclam,     exclamdown ] };
